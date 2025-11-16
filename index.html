@@ -7,6 +7,10 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f9f9f9;
@@ -14,6 +18,28 @@
             padding: 0;
             line-height: 1.6;
         }
+
+        /* Navbar */
+        .navbar {
+            text-align: center;
+            background: #2980b9;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #f1c40f;
+        }
+
+        /* Header */
         .header {
             text-align: center;
             background-color: #3498db;
@@ -22,6 +48,16 @@
         }
         .header h1 { margin: 0; font-size: 36px; }
         .header p { margin-top: 10px; font-size: 18px; }
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            margin-bottom: 15px;
+        }
+
+        /* Sections */
         .section {
             background: #fff;
             margin: 30px auto;
@@ -30,26 +66,64 @@
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
-        .section h2 { font-size: 28px; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 8px; margin-bottom: 15px; }
+        .section h2 {
+            font-size: 28px;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Skills badges */
         ul { list-style-type: none; padding: 0; }
-        ul li { display: inline-block; background: #3498db; color: #fff; padding: 6px 12px; margin: 5px; border-radius: 20px; transition: transform 0.2s, background 0.2s; font-size: 14px; }
-        ul li:hover { background: #2980b9; transform: scale(1.1); }
-        .section#contact a { color: #3498db; text-decoration: none; }
-        .section#contact a:hover { text-decoration: underline; }
+        ul li {
+            display: inline-block;
+            background: #3498db;
+            color: #fff;
+            padding: 6px 12px;
+            margin: 5px;
+            border-radius: 20px;
+            transition: transform 0.2s, background 0.2s;
+            font-size: 14px;
+        }
+        ul li:hover {
+            background: #2980b9;
+            transform: scale(1.1);
+        }
+
+        /* Contact links */
+        .section#contact a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .section#contact a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Header -->
     <div class="header">
+        <img src="profile.jpg" alt="Shital Angad Motilal" class="profile-pic">
         <h1>Shital Angad Motilal</h1>
         <p>BCA Student | MERN Learner | Web Developer</p>
     </div>
 
+    <!-- About Me -->
     <div class="section" id="about">
         <h2>About Me</h2>
         <p>Hello! I am Shital, a BCA student from Latur. I have learned C, C++, JavaScript, Python, HTML, CSS, and MySQL. I have also created a student registration form using the MERN stack.</p>
     </div>
 
+    <!-- Skills -->
     <div class="section" id="skills">
         <h2>Skills</h2>
 
@@ -85,6 +159,7 @@
         </ul>
     </div>
 
+    <!-- Contact -->
     <div class="section" id="contact">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:shitalmotilal21@gmail.com">shitalmotilal21@gmail.com</a></p>
